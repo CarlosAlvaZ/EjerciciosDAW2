@@ -7,15 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="./potencia.css">
     <link rel="shortcut icon" type="png" href="./code.png">
+    <script src="./potencia.js"></script>
     <title>Potencia con Objetos || Ejercicio #1 | Guia #4</title>
 </head>
 <body>
 
     <div class="text">
         <img src="./code.png" alt="Imagen">
-        <h1>Calculadora con Funcones JS</h1>
+        <h1>Exponente con Objetos JS</h1>
     </div>
 
-    
+    <div class="inputs">
+        <input type="number" id="base" placeholder="Base">
+        <h4> elevado a la </h4>
+        <input type="number" id="exp" placeholder="Exponente">
+        <h4> potencia.</h4>
+        <button id="elevar" class="btn btn-success">Elevar</button>
+    </div>
+
+    <div class="result">
+        <h2>El resultado es:</h2>
+        <br>
+        <h3 id="resultTarget"></h3>
+    </div>
 </body>
 </html>
