@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="./calc.css">
+    <script src="./calc.js" defer></script>
     <title>Calculadora con funciones JS || Ejercicio #2 | Guia #3</title>
 </head>
 <body>
@@ -16,106 +17,108 @@
     </div>
     
     <!-- HTML calculadora -->
-    <div class="container justify-content-center">
-        <div id="calc">
+    <div class="calc-container">
 
-            <div class="row titulo">
-                CASIO
+        <div class="container" id="calc">
+
+            <div class="row title">
+                <h4>CASIO</h4>
             </div>
 
             <div class="row inputRow" data-row="input">
-                <input type="number " id="input">
+                <label for="input" id="label">0</label>
+                <input type="number" id="input">
             </div>
 
             <div class="row" data-row="1">
                 <div class="col-3 op" data-operation="modulus">
-                    <button>%</button>
+                    <button class="modulus">%</button>
                 </div>
                 <div class="col-3 op" data-operation="sqrt">
-                    <button>sqrt</button>
+                    <button class="sqrt">sqrt</button>
                 </div>
                 <div class="col-3 op" data-operation="inverse">
-                    <button>1/x</button>
+                    <button class="inverse">1/x</button>
                 </div>
-                <div class="col-3 op" data-operation="substraction">
-                    <button>-</button>
+                <div class="col-3 op" data-operation="square">
+                    <button class="square">^2</button>
                 </div>
             </div>
 
             <div class="row" data-row="2">
                 <div class="col-6 backspace">
-                    <button>Backspace</button>
+                    <button class="backspaceButton">Backspace</button>
                 </div>
                 <div class="col-3 clearE">
-                    <button>CE</button>
+                    <button class="clearEbutton">CE</button>
                 </div>
                 <div class="col-3 clear">
-                    <button>C</button>
+                    <button class="clearbutton">C</button>
                 </div>
             </div>
 
             <div class="row" data-row="3">
-                <div class="col-3 number" data-number="7">
-                    <button>7</button>
+                <div class="col-3">
+                    <button class="number" data-number="7">7</button>
                 </div>
-                <div class="col-3 number" data-number="8">
-                    <button>8</button>
+                <div class="col-3">
+                    <button class="number" data-number="8">8</button>
                 </div>
-                <div class="col-3 number" data-number="9">
-                    <button>9</button>
+                <div class="col-3">
+                    <button class="number" data-number="9">9</button>
                 </div>
                 <div class="col-3 op" data-operation="division">
-                    <button>/</button>
+                    <button class="division">/</button>
                 </div>
             </div>
 
             <div class="row" data-row="4">
-                <div class="col-3 number" data-number="4">
-                    <button>4</button>
+                <div class="col-3">
+                    <button class="number" data-number="4">4</button>
                 </div>
-                <div class="col-3 number" data-number="5">
-                    <button>5</button>
+                <div class="col-3">
+                    <button class="number" data-number="5">5</button>
                 </div>
-                <div class="col-3 number" data-number="6">
-                    <button>6</button>
+                <div class="col-3">
+                    <button class="number" data-number="6">6</button>
                 </div>
                 <div class="col-3 op" data-operation="multiplication">
-                    <button>*</button>
+                    <button class="multiplication">*</button>
                 </div>
             </div>
 
             <div class="row" data-row="5">
-                <div class="col-3 number" data-number="3">
-                    <button>3</button>
+                <div class="col-3">
+                    <button class="number" data-number="3">3</button>
                 </div>
-                <div class="col-3 number" data-number="2">
-                    <button>2</button>
+                <div class="col-3">
+                    <button class="number" data-number="2">2</button>
                 </div>
-                <div class="col-3 number" data-number="1">
-                    <button>1</button>
+                <div class="col-3">
+                    <button class="number" data-number="1">1</button>
                 </div>
                 <div class="col-3 op" data-operation="substraction">
-                    <button>-</button>
+                    <button class="substraction">-</button>
                 </div>
             </div>
 
             <div class="row" data-row="6">
-                <div class="col-3 number" data-number="0">
-                    <button>0</button>
+                <div class="col-3">
+                    <button class="number" data-number="0">0</button>
                 </div>
-                <div class="col-3 point">
-                    <button>.</button>
+                <div class="col-3">
+                    <button class="point">.</button>
                 </div>
                 <div class="col-3 op" data-operation="addition">
-                    <button>+</button>
+                    <button class="addition">+</button>
                 </div>
-                <div class="col-3 equal">
-                    <button>=</button>
+                <div class="col-3">
+                    <button class="equal">=</button>
                 </div>
             </div>
 
         </div>
-        
+
     </div>
 
 
