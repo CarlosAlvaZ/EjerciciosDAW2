@@ -1,3 +1,4 @@
+// Declarando las referencias a todos los elementos HTML
 const input = document.querySelector("#input")
 const label = document.querySelector("#label")
 const numbers = document.querySelectorAll(".number")
@@ -14,16 +15,22 @@ const substraction = document.querySelector(".substraction")
 const addition = document.querySelector(".addition")
 const point = document.querySelector(".point")
 const equal = document.querySelector(".equal")
+
+// Variables Globales
 let inputVal = "0"
 let labelVal = "0"
 let result = "0"
 let currentOperation = undefined
 
+// Funcion para mantener activo el input
 function focus(){
     input.focus()
 }
 
+// Funcion para imprimir los valores en el input y en el label
 function print(){
+
+    // Se evalua si termina en "." porque si no daria error al parsearlo
     if(inputVal.toString().endsWith(".")){
         input.value = inputVal.toString().slice(0,-1)
     }else{
@@ -32,6 +39,7 @@ function print(){
     }
 }
 
+// Funcion que mueve el contenido de la etiqueta input hacia el label
 function displace(){
     labelVal = inputVal
     inputVal = "0"
@@ -81,6 +89,7 @@ function additionF(sumando1, sumando2){
     return sumando1 + sumando2
 }
 
+// Funcion para mostrar el contenido de la variable result en la etiqueta label
 function equalF(){
     currentOperation = undefined
     labelVal = result
@@ -88,8 +97,8 @@ function equalF(){
     print()
 }
 
+// Funcion para evaluar la operacion que se esta llevando a cabo para llamarla a través de eval()
 function evalOperation(){
-    console.log(currentOperation)
     if(currentOperation === undefined){
         return
     }
@@ -98,6 +107,9 @@ function evalOperation(){
     focus()
 }
 
+// Funcion para validar si ambos campos, tanto el label como el input, contienen información dentro de ellos
+// para llamar la funcion correspondiente y obtener el resultado, caso contrario, se establece la operación 
+// que se está llevando a cabo para la siguiente llamada.
 function validation(operation){
     if(labelVal == "0"){
         currentOperation = operation
@@ -113,9 +125,11 @@ function validation(operation){
     currentOperation = operation
 }
 
+// Inicialización de la interfaz
 print()
 focus()
 
+// Añadiendo todos los event listeners a los elementos HTML
 numbers.forEach(number=>{
     number.addEventListener('click', (e)=>{
         if(inputVal == "0"){
