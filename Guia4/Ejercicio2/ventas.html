@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="./ventas.js" type="module" defer></script>
+    <link rel="stylesheet" href="./ventas.css">
+    <title>Sistema de Ventas con Objetos JS || Ejercicio #2 | Guia #4</title>
+</head>
+<body>
+    
+    <div class="text">
+        <img src="./code.png" alt="Imagen">
+        <h1>Lista de ventas con Objetos JS</h1>
+    </div>
+
+    <div class="product-list-div">
+        <div>
+            <h2>Lista de productos</h2>
+            <table class="product-list">
+                <br>
+                <thead class="titulos">
+                    <th>#</th>
+                    <th>Nombre del Producto</th>
+                    <th>Precio Unitario</th>
+                    <th>Cantidad</th>
+                    <th>Sub Total</th>
+                </thead>
+                
+                <tbody class="cuerpo">
+                    <template class="template-row">
+                        <tr>
+                            <td class="id"></td>
+                            <td class="nombre"></td>
+                            <td class="precio"></td>
+                            <td class="cantidad"></td>
+                            <td class="detalle"></td>
+                        </tr>
+                    </template>
+                </tbody>
+    
+                <tfoot class="total-row">
+                    <td colspan="4"><strong>TOTAL</strong></td>
+                    <td class="total"><strong>$ 0.00</strong></td>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div class="toggler">
+        <span><strong>+</strong></span>
+    </div>
+
+    <div class="input-div hidden">
+        <div class="inputs">
+            <div>
+                <h4>Añadir un nuevo producto</h4>
+            </div>
+            <div class="input">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+            </div>
+            <div class="input">
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" placeholder="$ 0.00" id="precio" step="0.01">
+            </div>
+            <div class="input">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" name="cantidad" placeholder="0" id="cantidad">
+            </div>
+            <div class="button">
+                <button class="add btn btn-success">Añadir</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
